@@ -3,10 +3,12 @@
     height: 80px;
     background-image: url(./sprites/Mobile\ -\ Teenage\ Mutant\ Ninja\ Turtles\ Power\ of\ Four\ -\ Turtles\ &\ Miscellaneous\ Enemies.png);
     
-    animation: play-sprite 1s steps(6) infinite
+    animation: play-sprite 1s steps(4) infinite
 }
 
 @keyframes play-sprite {
     0% { background-position: 0px 0px; } 
-    100% { background-position: -400px 0px;}
+    25% { background-position:  : 100px 0px ;}
+    50% { background-position: -200px 0px;}
+    100% { background-position: -400px -0px;}
 }
