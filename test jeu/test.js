@@ -1,9 +1,6 @@
-const sprite = document.getElementById('mickey');
-const step = 10; // Nombre de pixels par pas de déplacement
-
-
 const spriteHammer = document.getElementById('hammer');
 const stepHammer = 10;
+
 
 window.addEventListener('keydown', moveHammer);
 function moveHammer(event) {
@@ -19,6 +16,7 @@ function moveRightH() {
   const currentPosition = parseInt(hammer.style.left) || 0;
   const newPosition = currentPosition + step;
   hammer.style.left = `${newPosition}px`;
+
 }
 
 function moveLeftH() {
@@ -27,7 +25,23 @@ function moveLeftH() {
   hammer.style.left = `${newPosition}px`;
 }
 
+
+
+const sprite = document.getElementById('mickey');
+const step = 10; // Nombre de pixels par pas de déplacement
+
+const onHit = document.getElementById('combo-mickey');
+
 window.addEventListener('keydown', moveSprite);
+
+window.addEventListener('keydown', hit);
+
+function hit(event) {
+  const keyOnHit = event.key;
+  if (keyOnHit === 'KeyT') {
+
+  }
+}
 
 function moveSprite(event) {
   const keyPressed = event.key;
@@ -45,6 +59,10 @@ function moveRight() {
   const currentPosition = parseInt(mickey.style.left) || 0;
   const newPosition = currentPosition + step;
   mickey.style.left = `${newPosition}px`;
+  mickey.classList.add('mickey')
+  setTimeout(() => {
+    mickey.classList.remove('mickey')
+  },1000)
 }
 function moveLeft() {
   const currentPosition = parseInt(mickey.style.left) || 0;
