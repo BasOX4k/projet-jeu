@@ -3,34 +3,37 @@
   width: 1200px;
   height: 800px;
 }
-#mickey {
+#donna {
   width: 45px;
-  height: 45px;
-  background-image: url("../sprites/mickey-marche-sprite.png");
+  height: 50px;
+  background-image: url("../sprites/dona-marche-removebg-preview.png");
   /* background-position: 0px 0px; */
   position: relative;
   
 }
 
-.mickey {
-   animation: play-frames 1s steps(2) infinite;
+.donna {
+   animation: play-frames 1s steps(5) infinite;
 
 }
 
-#mickey-combo {
+#donna-combo {
   width: 45px;
-  height: 45px;
-  background-image: url("../sprites/combo-mickey-sprite.png");
+  height: 50px;
+  background-image: url("../sprites/donna-combo-removebg-preview.png");
   position: relative;
-  animation: combo-frames 1s steps(2) infinite;
+  animation: combo-frames 2s steps(5) infinite;
 }
   
-#hammer {
-  width: 80px;
-  height: 100px;
-  background-image: url("../sprites/Black-Hammer-sprite-removebg-preview.png");
+#leonardo {
+  width: 45px;
+  height: 50px;
+  background-image: url("../sprites/leonardo-walk-removebg-preview.png");
   position: relative;
-  /* animation: play 1s steps(2) infinite;   */
+  
+}
+.leonardo {
+animation: play 1s steps(5) infinite;  
 }
 
 /* @keyframes jump { */
@@ -60,7 +63,7 @@
     background-position: 0px 0px;
   }
   100% {
-    background-position: -400px 0px;
+    background-position: -375px 0px;
   }
 }
 
@@ -70,5 +73,5 @@
     background-position: 0px 0px;
   }
 
-  100% {background-position: -400px 0px;}
+  100% {background-position: -375px 0px;}
 }

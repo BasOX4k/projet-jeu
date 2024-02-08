@@ -1,36 +1,39 @@
-const spriteHammer = document.getElementById('hammer');
-const stepHammer = 10;
+const spriteLeonardo = document.getElementById('leonardo');
+const stepLeonardo = 10;
 
 
-window.addEventListener('keydown', moveHammer);
-function moveHammer(event) {
-  const keyPressedHammer = event.key;
-  if (keyPressedHammer === 'é') {
-    moveRightH();
+window.addEventListener('keydown', moveleonardo);
+function moveleonardo(event) {
+  const keyPressedLeonardo = event.key;
+  if (keyPressedLeonardo === 'é') {
+    moveRightL();
   }
-  if (keyPressedHammer === '&') {
-    moveLeftH();
+  if (keyPressedLeonardo === '&') {
+    moveLeftL();
   }
 }
-function moveRightH() {
-  const currentPosition = parseInt(hammer.style.left) || 0;
+function moveRightL() {
+  const currentPosition = parseInt(leonardo.style.left) || 0;
   const newPosition = currentPosition + step;
-  hammer.style.left = `${newPosition}px`;
-
+  leonardo.style.left = `${newPosition}px`;
+  leonardo.classList.add('leonardo')
+  setTimeout(() => {
+    leonardo.classList.remove('leonardo')
+  },1800)
 }
 
-function moveLeftH() {
-  const currentPosition = parseInt(hammer.style.left) || 0;
+function moveLeftL() {
+  const currentPosition = parseInt(leonardo.style.left) || 0;
   const newPosition = currentPosition - step;
-  hammer.style.left = `${newPosition}px`;
+  leonardo.style.left = `${newPosition}px`;
 }
 
 
 
-const sprite = document.getElementById('mickey');
+const sprite = document.getElementById('donna');
 const step = 10; // Nombre de pixels par pas de déplacement
 
-const onHit = document.getElementById('combo-mickey');
+const onHit = document.getElementById('combo-donna');
 
 window.addEventListener('keydown', moveSprite);
 
@@ -39,8 +42,10 @@ window.addEventListener('keydown', hit);
 function hit(event) {
   const keyOnHit = event.key;
   if (keyOnHit === 'KeyT') {
-
+    console.log("Coup donné !")
   }
+
+
 }
 
 function moveSprite(event) {
@@ -56,29 +61,18 @@ function moveSprite(event) {
 }
 
 function moveRight() {
-  const currentPosition = parseInt(mickey.style.left) || 0;
+  const currentPosition = parseInt(donna.style.left) || 0;
   const newPosition = currentPosition + step;
-  mickey.style.left = `${newPosition}px`;
-  mickey.classList.add('mickey')
+  donna.style.left = `${newPosition}px`;
+  donna.classList.add('donna')
   setTimeout(() => {
-    mickey.classList.remove('mickey')
-  },1000)
+    donna.classList.remove('donna')
+  }, 1800)
 }
 function moveLeft() {
-  const currentPosition = parseInt(mickey.style.left) || 0;
+  const currentPosition = parseInt(donna.style.left) || 0;
   const newPosition = currentPosition - step;
-  mickey.style.left = `${newPosition}px`;
+  donna.style.left = `${newPosition}px`;
 }
 
 
-// document.addEventListener('keydown', jump);
-
-// function jump(event) {
-  // if (event.keyCode === 32) { // Touche "Espace"
-    // const sprite = document.getElementById('sprite');
-    // sprite.style.animation = 'jump 0.5s ease alternate'; // Lancer l'animation de saut
-    // setTimeout(() => { // Réinitialiser l'animation après le saut
-      // sprite.style.animation = '';
-    // }, 500);
-  // }
-// }
