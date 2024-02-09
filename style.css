@@ -1,0 +1,77 @@
+#level {
+    background-color: lightblue;
+    width: 1200px;
+    height: 800px;
+  }
+  #donna {
+    width: 45px;
+    height: 50px;
+    background-image: url("../sprites/dona-marche-removebg-preview.png");
+    /* background-position: 0px 0px; */
+    position: relative;
+    
+  }
+  
+  .donna {
+     animation: play-frames 1s steps(5) infinite;
+  
+  }
+  
+  #donna-combo {
+    width: 45px;
+    height: 50px;
+    background-image: url("../sprites/donna-combo-removebg-preview.png");
+    position: relative;
+    animation: combo-frames 2s steps(5) infinite;
+  }
+    
+  #leonardo {
+    width: 45px;
+    height: 50px;
+    background-image: url("../sprites/leonardo-walk-removebg-preview.png");
+    position: relative;
+    
+  }
+  .leonardo {
+  animation: play 1s steps(5) infinite;  
+  }
+  
+  /* @keyframes jump { */
+  /* 0% { */
+  /* bottom: 0;  */
+  /* } */
+  /* 50% { */
+  /* bottom: 200px;  */
+  /* } */
+  /* 100% { */
+  /* bottom: 0; */
+  /* } */
+  /* } */
+  /* } */
+  
+  @keyframes play {
+    0% {
+      background-position: 0px 0px;
+    }
+    100% {
+      background-position: -197px 0px;
+    }
+  }
+  
+  @keyframes play-frames {
+    0% {
+      background-position: 0px 0px;
+    }
+    100% {
+      background-position: -375px 0px;
+    }
+  }
+  
+  
+  @keyframes combo-frames {
+    0% {
+      background-position: 0px 0px;
+    }
+  
+    100% {background-position: -375px 0px;}
+  }
