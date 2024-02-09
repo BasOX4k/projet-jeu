@@ -22,6 +22,9 @@
     height: 50px;
     background-image: url("./sprites/donna-combo-removebg-preview.png");
     position: relative;
+    
+  }
+  .donna-combo {
     animation: combo-frames 2s steps(5) infinite;
   }
     
@@ -33,7 +36,18 @@
     
   }
   .leonardo {
-  animation: play 1s steps(5) infinite;  
+  animation: play-leonardo 1s steps(5) infinite;  
+  }
+
+  #leo-combo{
+    width: 45px ;
+    height: 50px;
+    background-image: url(./sprites/leo-combo.png);
+    position: relative;
+  }
+
+  .leo-combo{
+    animation: play leo-combo 1s steps(4) infinite;
   }
   
   /* @keyframes jump { */
@@ -49,7 +63,7 @@
   /* } */
   /* } */
   
-  @keyframes play {
+  @keyframes play-leonardo {
     0% {
       background-position: 0px 0px;
     }

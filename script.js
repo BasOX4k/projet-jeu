@@ -1,3 +1,9 @@
+import ComboHandler from "./donna.js"
+import ComboLeo from "./leo.js";
+
+const comboLeo = new ComboLeo();
+const comboHandler = new ComboHandler();
+
 const spriteLeonardo = document.getElementById('leonardo');
 const stepLeonardo = 10;
 
@@ -33,20 +39,10 @@ function moveLeftL() {
 const sprite = document.getElementById('donna');
 const step = 10; // Nombre de pixels par pas de déplacement
 
-const onHit = document.getElementById('combo-donna');
+
 
 window.addEventListener('keydown', moveSprite);
 
-window.addEventListener('keydown', hit);
-
-function hit(event) {
-  const keyOnHit = event.key;
-  if (keyOnHit === 'KeyT') {
-    console.log("Coup donné !")
-  }
-
-
-}
 
 function moveSprite(event) {
   const keyPressed = event.key;
