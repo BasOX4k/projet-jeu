@@ -6,7 +6,7 @@
   #donna {
     width: 45px;
     height: 50px;
-    background-image: url("../sprites/dona-marche-removebg-preview.png");
+    background-image: url("../projet jeu/sprites/dona-marche-removebg-preview.png");
     /* background-position: 0px 0px; */
     position: relative;
     
@@ -20,7 +20,7 @@
   #donna-combo {
     width: 45px;
     height: 50px;
-    background-image: url("../sprites/donna-combo-removebg-preview.png");
+    background-image: url("../projet jeu/sprites/donna-combo-removebg-preview.png");
     position: relative;
     animation: combo-frames 2s steps(5) infinite;
   }
@@ -28,7 +28,7 @@
   #leonardo {
     width: 45px;
     height: 50px;
-    background-image: url("../sprites/leonardo-walk-removebg-preview.png");
+    background-image: url("../projet jeu/sprites/leonardo-walk-removebg-preview.png");
     position: relative;
     
   }
