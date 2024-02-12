@@ -42,7 +42,7 @@
   #leo-combo{
     width: 45px ;
     height: 50px;
-    background-image: url(./sprites/coup-leo-removebg-preview.png);
+    background-image: url("./sprites/coup-leo-removebg-preview.png");
     position: relative;
   }
 

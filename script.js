@@ -43,7 +43,7 @@ const step = 10; // Nombre de pixels par pas de déplacement
 
 window.addEventListener('keydown', moveSprite);
 
-
+// code movement donna
 function moveSprite(event) {
   const keyPressed = event.key;
 
