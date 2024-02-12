@@ -42,12 +42,12 @@
   #leo-combo{
     width: 45px ;
     height: 50px;
-    background-image: url(./sprites/leo-combo.png);
+    background-image: url(./sprites/coup-leo-removebg-preview.png);
     position: relative;
   }
 
   .leo-combo{
-    animation: play leo-combo 1s steps(4) infinite;
+    animation: play leo-combo 2s steps(5) infinite;
   }
   
   /* @keyframes jump { */
