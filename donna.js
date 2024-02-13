@@ -3,17 +3,19 @@ export default class ComboHandler{
         document.addEventListener('keydown', this.onHit.bind(this));
     }
    
-     onHit(event) {
-        const coup = document.getElementById('donna-combo');
+     
+  
+    onHit(event) {
+        const coup = document.getElementById('yujiPied');
 
         const keyOnHit = event.key.toLowerCase();
         console.log(keyOnHit);
         if (keyOnHit === 't'){
       
-        coup.classList.add('donna-combo');
+        yuji.classList.add('yujiPied');
       
         setTimeout(() => {
-          coup.classList.remove('donna-combo')
+          yuji.classList.remove('yujiPied')
         },1800)
       }
     }
