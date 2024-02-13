@@ -49,7 +49,7 @@ function moveSprite(event) {
 
   if (keyPressed === 'ArrowRight') {
     moveRight();
-  } 
+  } else
   if (keyPressed === 'ArrowLeft') { 
     moveLeft();
   }
@@ -70,5 +70,20 @@ function moveLeft() {
   const newPosition = currentPosition - step;
   donna.style.left = `${newPosition}px`;
 }
+
+// Récupérer les éléments DOM des div combos
+const donnaCombo = document.getElementById('donna-combo');
+const leoCombo = document.getElementById('leo-combo');
+
+// Ajouter un écouteur d'événement pour détecter les clics sur les div combos
+donnaCombo.addEventListener('keydown', () => {
+    // Faire disparaître la div Donna
+    document.getElementById('donna').style.display = 'none';
+});
+
+leoCombo.addEventListener('keydown', () => {
+    // Faire disparaître la div Leonardo
+    document.getElementById('leonardo').style.display = 'none';
+});
 
 

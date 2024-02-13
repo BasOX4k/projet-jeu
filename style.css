@@ -6,26 +6,26 @@
   #donna {
     width: 45px;
     height: 50px;
-    background-image: url("./sprites/dona-marche-removebg-preview.png");
+    background-image: url("./sprites/yuji-run-removebg-preview.png");
     /* background-position: 0px 0px; */
     position: relative;
     
   }
   
   .donna {
-     animation: play-frames 1s steps(5) infinite;
+     animation: play-frames 1s steps(7) infinite;
   
   }
   
   #donna-combo {
     width: 45px;
     height: 50px;
-    background-image: url("./sprites/donna-combo-removebg-preview.png");
+    background-image: url("./sprites/B-Attack.png");
     position: relative;
     
   }
   .donna-combo {
-    animation: combo-frames 2s steps(5) infinite;
+    animation: combo-frames 1s steps(7) infinite;
   }
     
   #leonardo {
@@ -50,18 +50,6 @@
     animation: play leo-combo 2s steps(5) infinite;
   }
   
-  /* @keyframes jump { */
-  /* 0% { */
-  /* bottom: 0;  */
-  /* } */
-  /* 50% { */
-  /* bottom: 200px;  */
-  /* } */
-  /* 100% { */
-  /* bottom: 0; */
-  /* } */
-  /* } */
-  /* } */
   
   @keyframes play-leonardo {
     0% {
