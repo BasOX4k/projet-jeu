@@ -4,47 +4,18 @@ import ComboLeo from "./leo.js";
 const comboLeo = new ComboLeo();
 const comboHandler = new ComboHandler();
 
-// const spriteLeonardo = document.getElementById('leonardo');
-// const stepLeonardo = 10;
-
-
-// window.addEventListener('keydown', moveleonardo);
-// function moveleonardo(event) {
-//   const keyPressedLeonardo = event.key;
-//   if (keyPressedLeonardo === 'é') {
-//     moveRightL();
-//   }
-//   if (keyPressedLeonardo === '&') {
-//     moveLeftL();
-//   }
-// }
-// function moveRightL() {
-//   const currentPosition = parseInt(leonardo.style.left) || 0;
-//   const newPosition = currentPosition + step;
-//   leonardo.style.left = `${newPosition}px`;
-//   leonardo.classList.add('leonardo')
-//   setTimeout(() => {
-//     leonardo.classList.remove('leonardo')
-//   },1800)
-// }
-
-// function moveLeftL() {
-//   const currentPosition = parseInt(leonardo.style.left) || 0;
-//   const newPosition = currentPosition - step;
-//   leonardo.style.left = `${newPosition}px`;
-// }
-
-
-
 const sprite = document.getElementById('yuji');
-const step = 10; // Nombre de pixels par pas de déplacement
+// Nombre de pixels par pas de déplacement
+
+const jumpVelocity = 5;
+// Variable pour suivre l'état du saut
+let isJumping = false;
 
 
-
-window.addEventListener('keydown', moveSprite);
-
+window.addEventListener('keydown', handleKeyPress);
+const step = 10; 
 // code movement donna
-function moveSprite(event) {
+function handleKeyPress(event) {
   const keyPressed = event.key;
 
   if (keyPressed === 'ArrowRight') {
@@ -52,18 +23,17 @@ function moveSprite(event) {
   } else
   if (keyPressed === 'ArrowLeft') { 
     moveLeft();
+  } else
+  if (keyPressed === 'ArrowUp') {
+    performJump()
   }
- 
 }
 
 function moveRight() {
   const currentPosition = parseInt(sprite.style.left) || 0;
   const newPosition = currentPosition + step;
   sprite.style.left = `${newPosition}px`;
-  sprite.classList.add('yuji')
-  setTimeout(() => {
-    sprite.classList.remove('yuji')
-  }, 1800)
+  sprite.classList.add('yuji');
 }
 function moveLeft() {
   const currentPosition = parseInt(sprite.style.left) || 0;
@@ -71,27 +41,52 @@ function moveLeft() {
   sprite.style.left = `${newPosition}px`;
 }
 
-function yujiPied(){
-  yuji.classList.add("yujiPied");
+function performJump() {
+  isJumping = true;
+  const currentPosition = parseInt(sprite.style.top) || 0;
+  const top = 1;
+  const newPosition = currentPosition - top;
+   sprite.style.top = `${newPosition}px`;
+    
+  // } 
+  
+  // sprite.classList.add('yuji');
+  
+}  
+// Récupérer les éléments DOM des div combos
+const comboYuji = document.querySelector('.yujiPied');
 
-    setTimeout(function() {
-      yuji.classList.remove("yujiPied");
-    }, 1800)
+
+
+let tousLesObstacles = [".obstacle", ".obstacle2", ".obstacle3"];
+let tousLesObstacles2 = [".obstacle4", ".obstacle5", ".obstacle6"];
+
+// Retourne un chiffre aléatoire entre 0 et la taille du tableau
+function getRandomNumber(tableau) {
+  return Math.floor(Math.random() * tableau);
 }
 
-// Récupérer les éléments DOM des div combos
-const yuji = document.querySelector('.yujiPeid');
-const leoCombo = document.getElementById('leo-combo');
+// Retourne un des obstacles du premier tableau
+function getRandomObstacle() {
+  return tousLesObstacles[getRandomNumber(tousLesObstacles.length)];
+}
 
-// Ajouter un écouteur d'événement pour détecter les clics sur les div combos
-// yuji.addEventListener('keydown', () => {
-//     // Faire disparaître la div Donna
-//     document.getElementById('yuji').style.display = 'none';
-// });
+// Retourne un des obstacles du deuxième tableau
+function getRandomObstacle2() {
+  return tousLesObstacles2[getRandomNumber(tousLesObstacles2.length)];
+}
 
-// leoCombo.addEventListener('keydown', () => {
-//     // Faire disparaître la div Leonardo
-//     document.getElementById('leonardo').style.display = 'none';
-// });
+// Fonction pour faire bouger un obstacle toutes les 2,1 secondes
+function obstacleBouge() {
+  let obstacleAleatoire = getRandomObstacle();
+  let obstacleChoisi = document.querySelector(obstacleAleatoire);
+  obstacleChoisi.classList.add("animationObstacle");
+
+  setTimeout(function () {
+    obstacleChoisi.classList.remove("animationObstacle");
+  }, 2000);
+
+  setTimeout(obstacleBouge, 2100);
+}
 
 
